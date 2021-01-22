@@ -1,0 +1,35 @@
+version: "2.1"
+
+services:
+  udp2raw-tcp-c:
+    build:
+      context: ./
+    image: jasperhale/udp2raw:latest
+    container_name: udp2raw-tcp-c
+    restart: always
+    privileged: true
+    network_mode: "host"
+    volumes:
+      - ./config/client-tcp.conf:/config.conf 
+
+  # udp2raw-icmp-c:
+  #   build:
+  #     context: ./
+  #   image: jasperhale/udp2raw:latest
+  #   container_name: udp2raw-icmp-c
+  #   restart: always
+  #   privileged: true
+  #   network_mode: "host"
+  #   volumes:
+  #     - ./config/client-icmp.conf:/config.conf 
+
+  # udp2raw-tcp6-c:
+  #   build:
+  #     context: ./
+  #   image: jasperhale/udp2raw:latest
+  #   container_name: udp2raw-tcp6-c
+  #   restart: always
+  #   privileged: true
+  #   network_mode: "host"
+  #   volumes:
+  #     - ./config/client-tcp6.conf:/config.conf 
