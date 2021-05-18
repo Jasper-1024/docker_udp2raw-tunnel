@@ -10,7 +10,7 @@ on:
 
 env:
   # 设置 docker 镜像名
-  IMAGE_NAME: test
+  IMAGE_NAME: udp2raw
   IMAGE_ID: jasperhale/$IMAGE_NAME
 
 jobs:
